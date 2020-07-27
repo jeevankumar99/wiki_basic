@@ -1,0 +1,20 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Error</title>
+        <link href="{% static 'encyclopedia/styles.css'%}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="err_div">
+            <h1 style='text-align: center'>{{ error }}</h1>
+            <h2>{{ message }}</h2>
+            <form action="{% url 'index' %}">
+                <input id="home_button" type="submit" value="Back to Home Page"/>
+            </form>
+        </div>
+    </body>
+</html>
+
+

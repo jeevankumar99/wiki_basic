@@ -1,0 +1,209 @@
+html {
+    position: fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+body {
+    background-color: black;
+    max-width: 1880px;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+li {
+    color: white;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.entries {
+    margin-left: 30px;
+    margin-top: 35px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    display: flexbox;
+    background-color: black;
+    margin: 20px;
+    margin-left: 30px;
+    height: 96vh;
+    color: white;
+    width: 15%;
+    border-radius: 15px;
+}
+
+#wiki {
+    background-color: rgb(63, 63, 63);
+    padding: 5px;
+    padding-left: 10px;
+    margin-right: 20px;
+    border-radius: 10px;;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+.ent_list {
+    color: white;
+}
+
+.ent_list:hover {
+    color: white;
+
+}
+
+#err_div {
+    background-color: rgb(63, 63, 63);
+    justify-content: center;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home_button, #create_button {
+    background-color:rgb(28, 134, 255);
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    border: 0px;
+    margin: 5px;
+}
+
+#id_title_bar, #id_content_box {
+    width: 75%;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid gray;
+    background-color: rgb(39, 39, 39);
+    margin-left: 80px;
+}
+
+#wiki_search{
+    margin-top: 15px;
+    padding: 8px;
+    padding-top: 12px;
+    color: white;
+    background-color: rgb(63, 63, 63);
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 5px;
+    width: 94%;
+}
+
+#id_searchbox, #search_button {
+    background-color: black;
+    padding: 7px;
+    border-radius: 10px;
+    width: 100%;
+    border: 0;
+    height: 35px;
+    color: white;
+}
+
+#id_searchbox:focus {
+    outline: none;
+    border: 1px solid rgb(84, 113, 243);
+}
+
+#search_button {
+    color: white;
+    background-color: rgb(28, 134, 255);
+    height: 30px;
+    margin-top: 10px;
+    padding: 0px;
+}
+
+#search_button:hover, #create_button:hover, #home_button:hover {
+    background-color: rgb(61, 152, 255);
+    cursor: pointer;
+}
+::placeholder {
+    color: rgb(216, 216, 216);
+}
+
+#sidebar_content {
+    background-color: rgb(63, 63, 63);
+    margin-top: 15px;
+    border-radius: 15px;
+    margin-right: 20px;
+    padding: 10px;
+    height: 78%;
+}
+
+#id_content_box {
+    margin-left: 30px;
+    height: 500px;
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+#id_title_bar:focus, #id_content_box:focus, #id_searchbox:focus {
+    border: 1px solid rgb(28, 134, 255);
+    outline: none;
+}
+#create_div {
+    background-color: rgb(63, 63, 63);
+    width: 200%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    display: block;
+}
+
+#title_div {
+    padding: 20px;
+}
+
+#search_results {
+    margin-top: 20px;
+}
+
+#create_button {
+    margin-left: 118px;
+    height: 40px;
+    width: 100px;
+}
+
+a {
+    color: rgb(125, 179, 250);
+}
+
+a:hover {
+    color: rgb(125, 179, 250);
+}
+
+h2, h3 {
+    color: white;
+}
