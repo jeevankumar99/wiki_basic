@@ -23,16 +23,13 @@
                 </div>
                 <div id="sidebar_content">
                     <div>
-                        <a href="{% url 'index' %}">Home</a>
+                        <h5><a href="{% url 'index' %}">Home</a><h5>
                     </div>
                     <div>
-                        <a href="/create">Create New Page</a>
+                        <h5><a href="/create">Create New Page</a></h5>
                     </div>
                     <div>
-                        Edit Pages
-                    </div>
-                    <div>
-                        Random Page
+                        <h5><a href="{% url 'random'%}">Random Page</a></h5>
                     </div>
                 </div>
                 {% block nav %}

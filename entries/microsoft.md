@@ -1,1 +1,0 @@
-is a brand started by bill gates

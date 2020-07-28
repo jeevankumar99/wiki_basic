@@ -1,1 +1,0 @@
-Telugu movie by Ram

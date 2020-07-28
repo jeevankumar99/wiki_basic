@@ -3,13 +3,14 @@ from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 import markdown2
+import random
 from django.shortcuts import render
 from . import util
 from . import util
 
 
 app_name = "encyclopedia"
-
+last_random_page = ''
 
 class SearchForm (forms.Form):
     searchbox = forms.CharField(label='', max_length=50, widget=forms.TextInput(
@@ -17,7 +18,7 @@ class SearchForm (forms.Form):
     ))
 
 class CreateEntry(forms.Form):
-    title_bar = forms.CharField(label="Title", max_length=45)
+    title_bar = forms.CharField(label="Title", max_length=45, widget=forms.TextInput)
     content_box = forms.CharField(label="Description", widget=forms.Textarea)
 
 def index(request):
@@ -74,25 +75,55 @@ def search_entries(request):
             "message": head_message
     }))
 
-def create(request):
+def create(request, bypass=False):
     searchbox = SearchForm()
     if request.method == 'GET':
         create_entry = CreateEntry()
         return render(request, 'encyclopedia/create.html', {
+            "page_title": "Create Entry",
             "form": searchbox,
-            "create_form": create_entry
+            "create_form": create_entry,
+            "button_name": "Create",
+            "action_url": ''
         })
     else:
         create_entry = CreateEntry(request.POST)
         if create_entry.is_valid():
-            for entry in util.list_entries():
-                if entry.lower() == create_entry.cleaned_data["title_bar"].lower():
-                    return render(request, 'encyclopedia/error.html', {
-                        "error": "Error",
-                        "message": f"{create_entry.cleaned_data['title_bar']} already exists in entries"
-                    })
+            if not bypass:
+                for entry in util.list_entries():
+                    if entry.lower() == create_entry.cleaned_data["title_bar"].lower():
+                        return render(request, 'encyclopedia/error.html', {
+                            "error": "Error",
+                            "message": f"{create_entry.cleaned_data['title_bar']} already exists in entries"
+                        })
+            print ("line 100 working"   )
             util.save_entry(
                 create_entry.cleaned_data["title_bar"], 
                 create_entry.cleaned_data["content_box"])
             return HttpResponseRedirect(f"/wiki/{create_entry.cleaned_data['title_bar']}")
  
+def edit(request, name):
+
+    if request.method == 'GET':
+        edit_entry = CreateEntry(initial={"title_bar": name, "content_box": util.get_entry(name)})
+        searchbox = SearchForm()
+        return render(request, 'encyclopedia/create.html', {
+            "page_title": f"Edit {name}",
+            "create_form": edit_entry,
+            "button_name": "Save",
+            "form": searchbox   
+        })
+    else:
+        return (create(request, True))
+
+def random_page(request):
+    global last_random_page
+    if last_random_page == '':
+        random_entry = random.choice(util.list_entries())
+    else:
+        corrected_list = util.list_entries()
+        corrected_list.remove(last_random_page)
+        random_entry = random.choice(corrected_list)
+    last_random_page = random_entry
+    return HttpResponseRedirect(f"/wiki/{random_entry}")
+
