@@ -27,11 +27,14 @@ def save_entry(title, content):
 
 def get_entry(title):
     """
-    Retrieves an encyclopedia entry by its title. If no such
-    entry exists, the function returns None.
+    Retrieves an encyclopedia entry by its title, returns (title, content).
+    If no such entry exists, the function returns None.
     """
-    try:
-        f = default_storage.open(f"entries/{title}.md")
-        return f.read().decode("utf-8")
-    except FileNotFoundError:
-        return None
+    for entry in list_entries():
+        if title.lower() == entry.lower():
+            try:
+                f = default_storage.open(f"entries/{entry}.md")
+                return (entry, f.read().decode("utf-8"))
+            except FileNotFoundError:
+                return None
+    return None
