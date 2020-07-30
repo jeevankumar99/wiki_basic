@@ -7,7 +7,11 @@
     <div id="create_div">
         <form action="{{ action_url }}" method="POST">
             {% csrf_token %}
-            {{ create_form.as_p }}
+        <p> 
+            <label for="id_title_bar">Title:</label>
+            {{ create_form.title_bar }}<br>
+            <label style="margin-top: 15px" for="id_content_box">Description:</label>
+            {{ create_form.content_box }}
             <input id="create_button" type="submit" value="{{ button_name }}">
         </form>
     </div>

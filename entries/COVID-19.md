@@ -1,0 +1,3 @@
+# COVID-19 pandemic
+
+The __COVID‑19__ pandemic, also known as the coronavirus pandemic, is an ongoing global pandemic of coronavirus disease 2019 (COVID‑19), caused by severe acute respiratory syndrome coronavirus 2 (SARS‑CoV‑2).The outbreak was first identified in December 2019 in Wuhan, China.The World Health Organization declared the outbreak a Public Health Emergency of International Concern on 30 January 2020 and a pandemic on 11 March.As of 30 July 2020, more than 17 million cases of COVID‑19 have been reported in more than 188 countries and territories, resulting in more than 667,000 deaths; more than 9.96 million people have recovered.

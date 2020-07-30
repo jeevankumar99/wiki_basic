@@ -38,3 +38,4 @@ def get_entry(title):
             except FileNotFoundError:
                 return None
     return None
+

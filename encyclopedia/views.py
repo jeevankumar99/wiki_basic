@@ -5,6 +5,7 @@ from django.urls import reverse
 import markdown2
 import random
 from django.shortcuts import render
+import textwrap
 from . import util
 from . import util
 
@@ -14,12 +15,14 @@ last_random_page = ''
 
 class SearchForm (forms.Form):
     searchbox = forms.CharField(label='', max_length=50, widget=forms.TextInput(
-        attrs={'placeholder': "Search Encylopedia"}
+        attrs={'placeholder': "Search Encylopedia", 'autocomplete': "off"}
     ))
 
 class CreateEntry(forms.Form):
-    title_bar = forms.CharField(label="Title", max_length=45, widget=forms.TextInput)
-    content_box = forms.CharField(label="Description", widget=forms.Textarea)
+    title_bar = forms.CharField(max_length=45, widget=forms.TextInput(
+        attrs={'autocomplete': "off"}
+    ))
+    content_box = forms.CharField(widget=forms.Textarea)
 
 def index(request):
     """ 
@@ -154,4 +157,3 @@ def random_page(request):
     #stores currently generated page to exclude it next time
     last_random_page = random_entry
     return HttpResponseRedirect(f"/wiki/{random_entry}")
-

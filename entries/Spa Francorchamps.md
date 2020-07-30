@@ -1,12 +1,19 @@
 # Spa Francorchamps
 
-###Belguim
+The _Circuit de Spa-Francorchamps_ is a motor-racing circuit located in Stavelot, Belgium. It is the current venue of the Formula One Belgian Grand Prix,  
+ hosting its first Grand Prix in 1925, and has held a Grand Prix every year since 1983
 
-_Formula 1 circuit_
+### Track Layout
 
-* Spa is a f1 race track i belguim hosting more than 200 grand prix.
+Designed in 1920 by _Jules de Thier_ and _Henri Langlois Van Ophem_,  
+the original course used public roads linking the Belgian towns of Francorchamps, Malmedy, and Stavelot.  
+The track’s inaugural race was planned for August 1921, but was cancelled when only one driver entered.
 
+### Eau Rouge
 
-* It is home to one of the most iconic corners on the F1 calender. The Eau Rouge!
-
-* It is 7.2 kilometers long and is one of the longest circuits in the world, It has a lot of steep altitude changes and the Eau Rouge is an example for this. After La source it goes from 0 to a 20 story height in the radellion section.
+The most famous part of the circuit is the Eau Rouge and Raidillon combination. Having negotiated the La Source hairpin, drivers race down a straight  
+ to the point where the track crosses the Eau Rouge stream for the first time, before being launched steeply uphill into a sweeping left-right-left  
+  series of corners with a blind summit. Properly speaking, the Eau Rouge corner is only the left-hander at the bottom. The following right-hander  
+   that leads steeply uphill, which was introduced in 1939 to shortcut the original Ancienne Douane hairpin, is called Raidillon [fr]. The corner   
+   requires an amount of skill from the driver to negotiate it well and the long Kemmel straight ahead produces good overtaking opportunities for  
+    drivers at the following "Les Combes" corner. The corner was tighter and narrower before 1970, allowing drivers to take the corner faster.
